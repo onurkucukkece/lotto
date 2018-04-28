@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ```ruby
   lotto = Lotto::Draw.new
-  lotto.play({ pick: 6, of: 49 }) # Returns an array
+  lotto.play({ pick: 6, of: 49 }) # will return an array
   lotto.play({ pick: 6, of: 49 }).sort.join(' - ')
 
   # Multiple draws
