@@ -23,7 +23,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-  lotto = new Lotto::Draw
+  lotto = Lotto::Draw.new
   lotto.play({ pick: 6, of: 49 }) # Returns an array
   lotto.play({ pick: 6, of: 49 }).sort.join(' - ')
 
