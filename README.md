@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+  lotto = Lotto::Draw.new
+  lotto.play({ pick: 6, of: 49 }) # will return an array
+  lotto.play({ pick: 6, of: 49 }).sort.join(' - ')
+
+  # Multiple draws
+  lotto.play({ pick: 6, of: 49, for 5 })
+````
 
 ## Development
 
