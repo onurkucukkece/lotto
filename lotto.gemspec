@@ -6,12 +6,11 @@ require "lotto/version"
 Gem::Specification.new do |spec|
   spec.name          = "lotto"
   spec.version       = Lotto::VERSION
-  spec.authors       = ["onur"]
+  spec.authors       = ["Onur Kucukkece"]
   spec.email         = ["onurkucukkece@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A customizable lottery gem}
+  spec.homepage      = "https://github.com/onurkucukkece/lotto"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
