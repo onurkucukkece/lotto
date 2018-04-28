@@ -28,7 +28,7 @@ Or install it yourself as:
   lotto.play({ pick: 6, of: 49 }).sort.join(' - ')
 
   # Multiple draws
-  lotto.play({ pick: 6, of: 49, for 5 })
+  lotto.play({ pick: 6, of: 49, for: 5 })
 ````
 
 ## Development
