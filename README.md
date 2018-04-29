@@ -1,6 +1,6 @@
 # Lotto
 
-[![CircleCI](https://circleci.com/gh/onurkucukkece/lotto/tree/master.svg?style=svg)](https://circleci.com/gh/onurkucukkece/lotto/tree/master)
+[![CircleCI](https://circleci.com/gh/onurkucukkece/lotto/tree/master.svg?style=svg)](https://circleci.com/gh/onurkucukkece/lotto/tree/master) [![Coverage Status](https://coveralls.io/repos/github/onurkucukkece/lotto/badge.svg?branch=feature%2Fimproved_specs)](https://coveralls.io/github/onurkucukkece/lotto?branch=feature%2Fimproved_specs)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/lotto`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -11,7 +11,7 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'lotto'
+gem 'lotto', '~> 0.2.0'
 ```
 
 And then execute:
