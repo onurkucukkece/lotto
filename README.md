@@ -1,5 +1,5 @@
 # Lotto
-[![Coverage Status](https://coveralls.io/repos/github/onurkucukkece/lotto/badge.svg?branch=feature%2Fimproved_specs)](https://coveralls.io/github/onurkucukkece/lotto?branch=feature%2Fimproved_specs) [![CircleCI](https://circleci.com/gh/onurkucukkece/lotto/tree/master.svg?style=svg)](https://circleci.com/gh/onurkucukkece/lotto/tree/master)
+[![Gem Version](https://badge.fury.io/rb/lotto.svg)](https://badge.fury.io/rb/lotto) [![Coverage Status](https://coveralls.io/repos/github/onurkucukkece/lotto/badge.svg?branch=feature%2Fimproved_specs)](https://coveralls.io/github/onurkucukkece/lotto?branch=feature%2Fimproved_specs) [![CircleCI](https://circleci.com/gh/onurkucukkece/lotto/tree/master.svg?style=svg)](https://circleci.com/gh/onurkucukkece/lotto/tree/master)
 
 A customizable lottery gem
 
