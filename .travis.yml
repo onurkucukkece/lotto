@@ -5,3 +5,4 @@ rvm:
   - 2.4.3
   - 2.3.6
 before_install: gem install bundler -v 1.16.1
+before_script: echo "repo_token: $COVERALLS_TOKEN" > .coveralls.yml
