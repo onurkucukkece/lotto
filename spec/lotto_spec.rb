@@ -10,14 +10,12 @@ RSpec.describe Lotto do
         expect(lotto.play(pick: 6, of: 49).length).to eq(6)
       end
 
-      100.times do
-        it 'should pick a number once' do
-          expect(lotto.play(pick: 6, of: 49).uniq.length).to eq 6
-        end
+      it 'should pick a number once' do
+        100.times { expect(lotto.play(pick: 6, of: 49).uniq.length).to eq 6 }
+      end
 
-        it 'should pick within correct range' do
-          expect(lotto.play(pick: 6, of: 49).max).to be <= 49
-        end
+      it 'should pick within correct range' do
+        100.times { expect(lotto.play(pick: 6, of: 49).max).to be <= 49 }
       end
     end
 
