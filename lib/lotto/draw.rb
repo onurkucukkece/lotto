@@ -22,6 +22,7 @@ module Lotto
     end
 
     def basket
+      return (1..@options[:of]).reject{ |n| @options[:exclude].include? n } unless @options[:exclude].nil?
       (1..@options[:of])
     end
   end
