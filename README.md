@@ -28,6 +28,9 @@ Or install it yourself as:
 
   # Multiple draws
   lotto.play({ pick: 6, of: 49, for: 5 })
+
+  # Exclude numbers
+  lotto.play({ pick: 6, of: 49, exclude: [6, 23] })
 ````
 
 ## Development
