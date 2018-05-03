@@ -35,5 +35,22 @@ RSpec.describe Lotto do
         columns.each{ |col| expect(col.uniq.length).to eq(6) }
       end
     end
+
+    describe '#play' do
+      it 'should exclude specified numbers' do
+        expect(lotto.play(pick: 6, of: 8, exclude: [7, 8])).not_to include(7)
+        expect(lotto.play(pick: 6, of: 8, exclude: [7, 8])).not_to include(8)
+      end
+    end
+
+    describe '#play' do
+      let(:columns) { lotto.play({ pick: 6, of: 10, exclude: [1, 9], for: 10 }) }
+      it "should exclude specified numbers in all draws" do
+        columns.each{ |col|
+          expect(col).not_to include(1)
+          expect(col).not_to include(9)
+         }
+      end
+    end
   end
 end

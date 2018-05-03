@@ -5,11 +5,6 @@ module Lotto
       @options[:for].nil? ? draw : draw_multiple
     end
 
-    def pick(drawns=[])
-      return rand(1..@options[:of]) if drawns.length == 0
-      (1..@options[:of]).reject{ |n| drawns.include? n }.sample
-    end
-
     def draw
       drawns = []
       @options[:pick].times{ drawns << pick(drawns) }
@@ -20,6 +15,15 @@ module Lotto
       coupons = []
       @options[:for].times{ coupons << draw }
       coupons
+    end
+
+    def pick(drawns = [])
+      basket.reject { |n| drawns.include? n }.sample
+    end
+
+    def basket
+      return (1..@options[:of]).reject{ |n| @options[:exclude].include? n } unless @options[:exclude].nil?
+      (1..@options[:of])
     end
   end
 end
