@@ -7,7 +7,9 @@ module Lotto
 
     def draw
       drawns = []
-      @options[:pick].times{ drawns << pick(drawns) }
+      @options[:include].each{ |n| drawns << n } unless @options[:include].nil?
+      count = @options[:include] ? @options[:pick] - @options[:include].count : @options[:pick]
+      count.times{ drawns << pick(drawns) }
       drawns
     end
 
