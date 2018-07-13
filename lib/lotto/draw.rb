@@ -7,7 +7,9 @@ module Lotto
 
     def draw
       drawns = []
-      @options[:pick].times{ drawns << pick(drawns) }
+      @options[:include].each{ |n| drawns << n } unless @options[:include].nil?
+      count = @options[:include] ? @options[:pick] - @options[:include].count : @options[:pick]
+      count.times{ drawns << pick(drawns) }
       drawns
     end
 
@@ -22,8 +24,10 @@ module Lotto
     end
 
     def basket
-      return (1..@options[:of]).reject{ |n| @options[:exclude].include? n } unless @options[:exclude].nil?
-      (1..@options[:of])
+      numbers = (1..@options[:of])
+      numbers = numbers.reject{ |n| @options[:include].include? n } unless @options[:include].nil?
+      numbers = numbers.reject{ |n| @options[:exclude].include? n } unless @options[:exclude].nil?
+      numbers
     end
   end
 end
