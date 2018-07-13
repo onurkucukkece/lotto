@@ -31,6 +31,9 @@ Or install it yourself as:
 
   # Exclude numbers
   lotto.play({ pick: 6, of: 49, exclude: [6, 23] })
+  
+  # Include numbers
+  lotto.play({ pick: 6, of: 49, include: [1, 8] })
 ````
 
 ## Development
