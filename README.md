@@ -8,7 +8,7 @@ A customizable lottery gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'lotto', '~> 0.4.0'
+gem 'lotto', '~> 0.5.0'
 ```
 
 And then execute:
