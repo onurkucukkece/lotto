@@ -7,6 +7,7 @@ module Lotto
       @options[:for].nil? ? draw : draw_multiple
     end
 
+    # Returns a set of drawn numbers
     def draw
       drawns = []
       @options[:include].each { |n| drawns << n } unless @options[:include].nil?
@@ -15,16 +16,19 @@ module Lotto
       drawns
     end
 
+    # Returns multiple drawn columns
     def draw_multiple
       coupons = []
       @options[:for].times { coupons << draw }
       coupons
     end
 
+    # Picks a number from the basket
     def pick(drawns = [])
       basket.reject { |n| drawns.include? n }.sample
     end
 
+    # Returns the basket with numbers
     def basket
       numbers = (1..@options[:of])
       numbers = numbers.reject { |n| @options[:include].include? n } unless @options[:include].nil?
