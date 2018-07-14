@@ -2,7 +2,7 @@
 module Lotto
   # lib/lotto/draw.rb
   class Draw
-    # Play numbers using the options
+    # Returns played numbers using the options
     def play(options)
       @options = options
       @options[:for].nil? ? draw : draw_multiple
@@ -24,7 +24,7 @@ module Lotto
       coupons
     end
 
-    # Picks a number from the basket
+    # Returns random number from basket where numbers in drawns are excluded
     def pick(drawns = [])
       basket.reject { |n| drawns.include? n }.sample
     end
