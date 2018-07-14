@@ -44,7 +44,7 @@ RSpec.describe Lotto do
     end
 
     describe '#play' do
-      let(:columns) { lotto.play({ pick: 5, of: 10, exclude: [1, 9], for: 10 }) }
+      let(:columns) { lotto.play(pick: 5, of: 10, exclude: [1, 9], for: 10) }
       it "should exclude specified numbers in all draws" do
         columns.each{ |col|
           expect(col).not_to include(1)
@@ -52,10 +52,14 @@ RSpec.describe Lotto do
           expect(col.count).to eq 5
          }
       end
+
+      it 'should return 10 columns' do
+        expect(columns.count).to eq 10
+      end
     end
 
     describe '#play' do
-      let(:columns) { lotto.play({ pick: 6, of: 20, include: [1, 9], for: 5 }) }
+      let(:columns) { lotto.play(pick: 6, of: 20, include: [1, 9], for: 5) }
       it "should include specified numbers in all draws" do
         columns.each{ |col|
           expect(col).to include(1)
@@ -63,10 +67,14 @@ RSpec.describe Lotto do
           expect(col.count).to eq 6
          }
       end
+
+      it 'should return 5 columns' do
+        expect(columns.count).to eq 5
+      end
     end
 
     describe '#play' do
-      let(:columns) { lotto.play({ pick: 6, of: 30, include: [1, 9], exclude: [2, 10], for: 5 }) }
+      let!(:columns) { lotto.play({ pick: 6, of: 30, include: [1, 9], exclude: [2, 10], for: 5 }) }
       it "should include and exclude specified numbers in all draws" do
         columns.each{ |col|
           expect(col).to include(1)
@@ -75,6 +83,10 @@ RSpec.describe Lotto do
           expect(col).not_to include(10)
           expect(col.count).to eq 6
          }
+      end
+
+      it 'should return 5 columns' do
+        expect(columns.count).to eq 5
       end
     end
   end
