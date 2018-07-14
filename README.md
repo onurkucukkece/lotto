@@ -3,6 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/3b71ad0bb22fa0a12835/maintainability)](https://codeclimate.com/github/onurkucukkece/lotto/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3b71ad0bb22fa0a12835/test_coverage)](https://codeclimate.com/github/onurkucukkece/lotto/test_coverage)
 ![](https://ruby-gem-downloads-badge.herokuapp.com/lotto?type=total&color=brightgreen)
+![](https://inch-ci.org/github/onurkucukkece/lotto.svg?branch=master)
 
 A customizable lottery gem
 
