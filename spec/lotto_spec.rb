@@ -1,12 +1,12 @@
 RSpec.describe Lotto do
-  it "has a version number" do
+  it 'has a version number' do
     expect(Lotto::VERSION).not_to be nil
   end
 
   describe 'Draw' do
     let(:lotto) { Lotto::Draw.new }
     describe '#play' do
-      it "should pick specified amount of number from specified range" do
+      it 'should pick specified amount of number from specified range' do
         expect(lotto.play({ pick: 6, of: 49 }).length).to eq(6)
       end
 
@@ -27,7 +27,7 @@ RSpec.describe Lotto do
 
     describe '#play' do
       let(:columns) { lotto.play({ pick: 6, of: 49, for: 5 }) }
-      it "should generate multilpe lotto columns" do
+      it 'should generate multilpe lotto columns' do
         expect(columns.length).to eq(5)
       end
 
