@@ -2,6 +2,7 @@
 module Lotto
   # lib/lotto/draw.rb
   class Draw
+    # Play numbers using the options
     def play(options)
       @options = options
       @options[:for].nil? ? draw : draw_multiple
