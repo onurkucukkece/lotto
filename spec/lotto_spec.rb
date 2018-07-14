@@ -74,7 +74,7 @@ RSpec.describe Lotto do
     end
 
     describe '#play' do
-      let!(:columns) { lotto.play({ pick: 6, of: 30, include: [1, 9], exclude: [2, 10], for: 5 }) }
+      let!(:columns) { lotto.play(pick: 6, of: 30, include: [1, 9], exclude: [2, 10], for: 5) }
       it 'should include and exclude specified numbers in all draws' do
         columns.each do |col|
           expect(col).to include(1)

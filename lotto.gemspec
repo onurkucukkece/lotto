@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Onur Kucukkece']
   spec.email         = ['onurkucukkece@gmail.com']
 
-  spec.summary       = %q{A customizable lottery gem}
+  spec.summary       = %(A customizable lottery gem)
   spec.homepage      = 'https://github.com/onurkucukkece/lotto'
   spec.license       = 'MIT'
 
