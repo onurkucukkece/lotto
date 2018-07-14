@@ -1,5 +1,6 @@
 # Lotto
 [![Gem Version](https://badge.fury.io/rb/lotto.svg)](https://badge.fury.io/rb/lotto) [![Coverage Status](https://coveralls.io/repos/github/onurkucukkece/lotto/badge.svg?branch=master)](https://coveralls.io/github/onurkucukkece/lotto?branch=master) [![Build Status](https://travis-ci.org/onurkucukkece/lotto.svg?branch=master)](https://travis-ci.org/onurkucukkece/lotto)
+[![Maintainability](https://api.codeclimate.com/v1/badges/3b71ad0bb22fa0a12835/maintainability)](https://codeclimate.com/github/onurkucukkece/lotto/maintainability)
 
 A customizable lottery gem
 
