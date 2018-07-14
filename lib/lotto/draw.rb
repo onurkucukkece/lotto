@@ -1,4 +1,6 @@
+# lib/lotto/draw.rb
 module Lotto
+  # lib/lotto/draw.rb
   class Draw
     def play(options)
       @options = options
@@ -15,7 +17,7 @@ module Lotto
 
     def draw_multiple
       coupons = []
-      @options[:for].times{ coupons << draw }
+      @options[:for].times { coupons << draw }
       coupons
     end
 

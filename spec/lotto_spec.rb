@@ -7,32 +7,32 @@ RSpec.describe Lotto do
     let(:lotto) { Lotto::Draw.new }
     describe '#play' do
       it 'should pick specified amount of number from specified range' do
-        expect(lotto.play({ pick: 6, of: 49 }).length).to eq(6)
+        expect(lotto.play(pick: 6, of: 49).length).to eq(6)
       end
 
       it 'should pick a number once' do
         100.times do
-          column = lotto.play({ pick: 6, of: 49 })
+          column = lotto.play(pick: 6, of: 49)
           expect(column.uniq.length).to eq 6
         end
       end
 
       it 'should pick within correct range' do
         100.times do
-          column = lotto.play({ pick: 6, of: 49 })
-          expect(column.sort.last).to be <= 49
+          column = lotto.play(pick: 6, of: 49)
+          expect(column.max).to be <= 49
         end
       end
     end
 
     describe '#play' do
-      let(:columns) { lotto.play({ pick: 6, of: 49, for: 5 }) }
+      let(:columns) { lotto.play(pick: 6, of: 49, for: 5) }
       it 'should generate multilpe lotto columns' do
         expect(columns.length).to eq(5)
       end
 
       it 'should pick a number once in a colum' do
-        columns.each{ |col| expect(col.uniq.length).to eq(6) }
+        columns.each { |col| expect(col.uniq.length).to eq(6) }
       end
     end
 
